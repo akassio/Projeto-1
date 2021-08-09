@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>To do List</title>
+</head>
+<body>
+    <header>
+        <h1> To do List</h1>
+    </header>
+    <form>
+        <input type="text" class="inserir" />
+        <button class="botao-add" type="submit">
+            <i class="fas fa-sign-in-alt"></i>
+        </button>
+        <div class="select">
+        <label for="select">Selecione:</label>
+          <select name="todos" class="filtro">
+            <option value="tudo">Todas tarefas</option>
+            <option value="completed">Tarefas concluídas</option>
+            <option value="pendente">Pendentes</option>
+          </select>
+        </div>
+      </form>
+      <div class="todo-container">
+        <ul class="lista-todos"></ul>
+      </div>
+      <div class="footer">
+        <p>akassio</p>
+      </div>
+    <script src="./todoListAkassio.js"></script>
+</body>
+</html>

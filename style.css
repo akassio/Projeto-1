@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(60deg, #a3a19a 0%, #a4d0d3 100%);
+    color: white;
+    min-height: 100vh;
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 2.5em;
+    padding:1em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' opacity='0.1' viewBox='-100 -100 200 200' width='100' height='100'%3E%3Cg id='snowflake'%3E%3Cg opacity='0.5' fill='hsl(0, 0%25, 100%25)'%3E%3Ccircle cx='-35' cy='-25' r='3.5' /%3E%3Ccircle cx='30' cy='-40' r='2' /%3E%3Ccircle cx='-15' cy='35' r='2.5' /%3E%3Ccircle cx='25' cy='10' r='2' /%3E%3Crect transform='rotate(45)' x='-10' y='-10' width='20' height='20'/%3E%3Cpath d='M -20 0 a 12 12 0 0 1 -12 -12 12 12 0 0 1 -12 12 12 12 0 0 1 12 12 12 12 0 0 1 12 -12' /%3E%3Cpath transform='rotate(90)' d='M -20 0 a 12 12 0 0 1 -12 -12 12 12 0 0 1 -12 12 12 12 0 0 1 12 12 12 12 0 0 1 12 -12' /%3E%3Cpath transform='rotate(180)' d='M -20 0 a 12 12 0 0 1 -12 -12 12 12 0 0 1 -12 12 12 12 0 0 1 12 12 12 12 0 0 1 12 -12' /%3E%3Cpath transform='rotate(270)' d='M -20 0 a 12 12 0 0 1 -12 -12 12 12 0 0 1 -12 12 12 12 0 0 1 12 12 12 12 0 0 1 12 -12' /%3E%3C/g%3E%3Cg fill='none' stroke-width='2' stroke='hsl(0, 0%25, 100%25)'%3E%3Cpath d='M -30 0 h 60 m -30 -30 v 60' /%3E%3Cpath transform='rotate(45)' d='M -30 0 h 60 m -30 -30 v 60' /%3E%3C/g%3E%3C/g%3E%3Cuse href='%23snowflake' x='100' y='100' /%3E%3Cuse href='%23snowflake' x='100' y='-100' /%3E%3Cuse href='%23snowflake' x='-100' y='100' /%3E%3Cuse href='%23snowflake' x='-100' y='-100' /%3E%3C/svg%3E"),
+        linear-gradient(to bottom right, hsl(207, 70%, 43%), hsl(0, 3%, 72%));
+    background-size: 40px, 100%;
+}
+
+header {
+    display:block;
+    line-height:1.00rem;
+    color: #ffffff;
+    margin-bottom:1rem;
+}
+
+header, form
+{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    font-family: 'Walter Turncoat', cursive;
+    background: white;
+}
+
+form button {
+    color: #37373c;
+    background-color: white;
+    cursor: auto;
+    transition: all 0.3s ease;
+}
+
+form button :hover {
+    background: green;
+    color: green;
+    background-color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-todos {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.filtro {
+    padding: 1rem;
+}
+
+.todo li {
+    flex: 1rem;
+}
+
+.trash-btn, .completed-btn {
+    background: #8f8c8c;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: auto;
+    font-size: 1rem;
+}
+
+.completed-btn {
+    background: rgb(14, 90, 202);
+}
+
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-check-double,
+.fa-minus-circle {
+  pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background-image: none;
+}
+
+.select {
+    margin: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #37373c;
+    width: 10rem;
+    cursor: auto;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Walter Turncoat', cursive;
+    width: 200px;
+    float: right;
+}
+
+.select::after {
+    content: normal;
+    position: absolute;
+    background: #37373c;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+label {
+    cursor: default;
+    color: #050505;
+    font-weight: bold;
+    display: block;
+    width: 200px;
+    float: center;
+    font-size: 1rem;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: left;
+}
